@@ -18,6 +18,10 @@ export function leerJsonPalabras() {
 
 // Seleccionar una palabra aleatoria del array de palabras
 export function seleccionarPalabraAleatoria() {
-  let palabraSecreta = words[Math.floor(Math.random() * words.length)].item
-  return palabraSecreta
+  if (words.length == 0) {
+    console.log('No hay palabras')
+  } else {
+    let palabraSecreta = words[Math.floor(Math.random() * words.length)].item
+    return palabraSecreta
+  }
 }

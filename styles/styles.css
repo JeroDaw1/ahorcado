@@ -24,3 +24,31 @@ main {
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
 }
+
+#palabra-secreta {
+  font-size: 50px;
+  font-weight: bold;
+  color: #f0f0f0;
+  text-align: center;
+  letter-spacing: 20px;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.children {
+  width: 40px;
+  height: 40px;
+  color: #0b0b0b;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
