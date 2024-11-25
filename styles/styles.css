@@ -1,6 +1,7 @@
 h1 {
   font-weight: bolder;
   font-family: Arial, Helvetica, sans-serif;
+  padding-top: 10px;
 }
 
 body {
@@ -39,16 +40,70 @@ main {
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  width: fit-content;
+  margin: 20px auto;
+  gap: 12px;
+  padding: 20px 0px;
 }
+
+/* #b4bfb7 */
 
 .children {
   width: 40px;
   height: 40px;
-  color: #0b0b0b;
-  background-color: #f0f0f0;
+  color: #f0f0f0;
+  background-color: #0b0b0b;
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Patrick Hand', sans-serif;
+  font-weight: bold;
+  font-size: large;
+}
+
+input {
+  border-radius: 5;
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  -ms-border-radius: 5;
+  -o-border-radius: 5;
+  width: 20px;
+}
+
+.correct {
+  background-color: #8fe1ad;
+}
+
+.incorrect {
+  background-color: #b4bfb7;
+}
+
+.win {
+  color: greenyellow;
+  font-family: 'Patrick Hand', cursive;
+  display: none;
+}
+
+.lose {
+  color: crimson;
+  font-family: 'Lacquer', sans-serif;
+  display: none;
+}
+
+.patrick-hand-regular {
+  font-family: 'Patrick Hand', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.patrick-hand-regular {
+  font-family: 'Patrick Hand', cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: bold;
 }

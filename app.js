@@ -5,7 +5,7 @@ let formularioHtml = document.getElementsByTagName('form')[0]
 let intentos = 0
 
 // Cargar archivo JSON con las palabras del juego y guardarlo en una variable
-export function leerJsonPalabras() {
+function leerJsonPalabras() {
   fetch('./words.json')
     .then(resp => {
       return resp.json()
@@ -22,13 +22,34 @@ export function leerJsonPalabras() {
 }
 
 // Seleccionar una palabra aleatoria del array de palabras
-export function seleccionarPalabraAleatoria() {
+function seleccionarPalabraAleatoria() {
   let palabraSecreta = words[Math.floor(Math.random() * words.length)].item
+
   return palabraSecreta
 }
 
-// Modificar SRC de la imagen para mostrar la imagen correspondiente al intento actual
+// Función que comprueba si la letra introducida es correcta
+function letraIntroducida(event) {
+  event.preventDefault()
 
+  const formChar = document.getElementsByTagName('input')[0].value
+
+  // Comprobar que la letra introducida es una letra y ningún otro caracter
+  if (formChar.length < 1 || formChar.length > 1) {
+    console.log('No es una letra')
+    return
+  } else {
+    console.log('wiii')
+  }
+
+  // if (palabraSecreta.toUpperCase().includes(formChar.toUpperCase())) {
+  //   console.log(true)
+  // } else {
+  //   console.log(false)
+  // }
+}
+
+// Modificar SRC de la imagen para mostrar la imagen correspondiente al intento actual
 function cambiarImagen(intento) {
   imagenHtml.src = './images/Hangman-' + intento + '.png'
 }
@@ -40,10 +61,6 @@ function transformarPalabra(palabra) {
     palabraSecreta += '_'
   }
   return palabraSecreta
-}
-
-function letraIntroducida(letra) {
-  console.log(letra)
 }
 
 // Iniciar juego

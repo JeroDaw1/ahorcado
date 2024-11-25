@@ -1,4 +1,4 @@
-const INTENTOS = 0
+let INTENTOS = 0
 
 function terminarJuego() {
   if (INTENTOS == 8) {
@@ -13,24 +13,30 @@ function letraIntroducida(letra, palabra) {
   }
 }
 
-function transformPalabra(palabra) {
-  let palabraSecreta = ''
-  for (let i = 0; i < palabra.length; i++) {
-    palabraSecreta += '_'
-  }
-  return palabraSecreta
-}
+// function transformPalabra(palabra) {
+//   let palabraSecreta = ''
+//   for (let i = 0; i < palabra.length; i++) {
+//     palabraSecreta += '_'
+//   }
+//   return palabraSecreta
+// }
 
-transformPalabra(palabra)
+// transformPalabra(palabra)
 
 function actualizarPalabra(palabra, letra) {
-  let palabraSecreta = ''
+  let palabraSecreta = 'palabra'
   for (let i = 0; i < palabra.length; i++) {
     palabraSecreta += '_'
   }
-  if (letra in palabra) {
-    replace('_', letra)
+  //console.log(palabraSecreta)
+
+  for (let i = 0; i < palabra.length; i++) {
+    if (palabra[i] === letra) {
+      palabraSecreta[i].replaceAll('_', letra)
+    }
   }
+
+  console.log(palabraSecreta)
 }
 
-actualizarPalabra('palabra', 'p')
+actualizarPalabra('palabra', 'l')

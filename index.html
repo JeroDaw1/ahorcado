@@ -5,23 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>El ahorcado</title>
     <link rel="stylesheet" href="./styles/styles.css" />
+    <link href="https://fonts.cdnfonts.com/css/lacquer" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/patrick-hand" rel="stylesheet" />
   </head>
   <body>
     <main>
       <h1>El Abogado</h1>
-
+      <h2 class="lose">El que tengo aquí colgado...</h2>
+      <h2 class="win">Al que has ayudado!!</h2>
       <img src="./images/Hangman-0.png" />
 
       <p id="palabra-secreta"></p>
 
-      <form>
-        <input type="text" maxlength="1" />
+      <form onsubmit="letraIntroducida(event)">
+        <input type="text" maxlength="1" required />
 
-        <input
-          type="submit"
-          value="Comprobar Letra"
-          onclick="letraIntroducida(letra)"
-        />
+        <button type="submit" value="Comprobar letra">Comprobar letra</button>
       </form>
 
       <div class="parent">
@@ -54,6 +53,7 @@
         <div class="children">Z</div>
       </div>
     </main>
-    <script src="./app.js" type="module"></script>
+
+    <script src="./app.js"></script>
   </body>
 </html>
