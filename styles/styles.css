@@ -77,10 +77,12 @@ input {
 
 .correct {
   background-color: #8fe1ad;
+  color: #0b0b0b;
 }
 
 .incorrect {
   background-color: #b4bfb7;
+  color: #0b0b0b;
 }
 
 .win {
